@@ -114,29 +114,48 @@
 </head>
 <body class="bg-background text-on-background antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 <!-- TopNavBar -->
-<nav class="sticky top-0 z-50 bg-surface dark:bg-background flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1920px] mx-auto flat no shadows transition-all duration-300" id="main-nav">
-<!-- Mobile Menu Button (Hidden on Desktop) -->
-<button aria-label="Open Menu" class="md:hidden p-2 text-primary dark:text-on-background hover:text-secondary transition-colors">
-<span class="material-symbols-outlined">menu</span>
-</button>
-<!-- Navigation Links (Left) -->
-<div class="hidden md:flex items-center space-x-gutter">
-<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
-</div>
-<!-- Brand Logo (Center) -->
-<div class="flex-shrink-0 cursor-pointer transition-opacity hover:opacity-80 absolute left-1/2 -translate-x-1/2">
-<a class="flex flex-col items-center" href="index.html">
-<img alt="TERRIEUX CERAMICS Logo" class="h-12 w-auto object-contain mb-1" src="assets/Terrieux-ceramics-logo.png"/>
-</a>
-</div>
-<!-- Trailing Actions (Right) -->
-<div class="flex items-center space-x-4">
-<button aria-label="Shopping Bag" class="p-2 text-primary dark:text-on-background hover:text-secondary transition-colors cursor-pointer">
-</button>
-</div>
+<nav class="sticky top-0 z-50 bg-surface dark:bg-background w-full transition-all duration-300" id="main-nav">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1920px] mx-auto relative">
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden p-2 text-primary dark:text-on-background hover:text-secondary transition-colors">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <!-- Navigation Links (Left) -->
+    <div class="hidden md:flex items-center space-x-gutter flex-1">
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+    </div>
+    <!-- Brand Logo (Center) -->
+    <div class="flex-shrink-0 cursor-pointer transition-opacity hover:opacity-80 absolute left-1/2 -translate-x-1/2">
+      <a class="flex flex-col items-center" href="index.html">
+        <img alt="TERRIEUX CERAMICS Logo" class="h-12 w-auto object-contain mb-1" src="assets/Terrieux-ceramics-logo.png"/>
+      </a>
+    </div>
+    <!-- Trailing Actions (Right) -->
+    <div class="flex items-center space-x-4 flex-1 justify-end">
+      <!-- empty bag button removed to clean up if not needed, or kept empty -->
+    </div>
+  </div>
+  <!-- Mobile Menu Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-background border-t border-outline-variant px-margin-mobile py-4 flex flex-col space-y-4">
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+  </div>
 </nav>
+<script>
+  // Setup mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if(btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+  });
+</script>
 <main>
 <!-- Hero Section -->
 <section class="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -146,8 +165,8 @@
 <div class="absolute inset-0 bg-black/20 mix-blend-multiply"></div>
 </div>
 <div class="relative z-10 flex flex-col items-center text-center px-margin-mobile md:px-margin-desktop mt-16">
-<div class="flex flex-col items-center mb-8 opacity-0 translate-y-4 animate-[fade-in-up_1s_ease-out_forwards]"><img alt="Terrieux Logo" class="h-24 md:h-32 w-auto object-contain mb-6 invert brightness-0" src="assets/Terrieux-ceramics-logo.png"/><p class="font-label-caps text-label-caps text-on-primary tracking-widest uppercase">Sculpter la matière, révéler l'émotion</p></div>
-<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors duration-300 opacity-0 translate-y-4 animate-[fade-in-up_1s_ease-out_0.3s_forwards]" href="#collections">
+<div class="flex flex-col items-center mb-8 opacity-0 translate-y-4 animate-[fade-in-up_1s_ease-out_forwards]"><img alt="Terrieux Logo" class="h-36 md:h-48 w-auto object-contain mb-6 invert brightness-0" src="assets/Terrieux-ceramics-logo.png"/><p class="font-label-caps text-[18px] text-on-primary tracking-widest uppercase">Sculpter la matière, révéler l'émotion</p></div>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors duration-300 opacity-0 translate-y-4 animate-[fade-in-up_1s_ease-out_0.3s_forwards]" href="collections.html">
                     Découvrir les collections
                 </a>
 </div>
@@ -160,7 +179,7 @@
 <h2 class="font-headline-md text-headline-md text-primary">Un artisanat silencieux</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Antony Terrieux crée des pièces céramiques uniques où la terre devient texture, mouvement et présence. Son univers artistique puise dans les formes organiques, les matières brutes et une esthétique minimaliste profondément contemporaine. Chaque création est façonnée à la main avec une attention particulière portée à l’équilibre, aux sensations et aux détails.</p><p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mt-4">Les surfaces, les nuances et les imperfections naturelles deviennent une signature visuelle, donnant naissance à des objets vivants et intemporels. Entre art et design, TERRIEUX CERAMICS développe une vision sensible de la céramique où fonctionnalité et émotion coexistent harmonieusement.</p>
 <div class="pt-4">
-<a class="group inline-flex items-center text-primary font-label-caps text-label-caps uppercase tracking-widest hover:text-secondary transition-colors" href="#">
+<a class="group inline-flex items-center text-primary font-label-caps text-label-caps uppercase tracking-widest hover:text-secondary transition-colors" href="atelier.html">
                             Notre philosophie
                             <span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
@@ -178,11 +197,11 @@
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1920px] mx-auto bg-surface-container-low" id="collections">
 <div class="mb-16 md:mb-24 flex justify-between items-end">
 <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">Nos Espaces</h2><p class="font-body-lg text-body-lg text-on-surface-variant mt-6 max-w-2xl">Vaisselle sculpturale, objets décoratifs et pièces artistiques composent des collections pensées pour habiter les espaces avec caractère, calme et authenticité.</p>
-<span class="hidden md:block font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Éditions Limitées</span>
+
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter md:gap-y-32">
 <!-- Gallery Item 1 -->
-<a class="group md:col-span-7 flex flex-col relative" href="#">
+<a class="group md:col-span-7 flex flex-col relative" href="collections.html">
 <div class="aspect-[16/9] w-full overflow-hidden bg-surface-container mb-6">
 <img alt="Sculptural tableware" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" data-alt="A striking, high-contrast flat lay photograph of a single, roughly textured ceramic plate. The plate is dark grey, contrasting sharply against a stark white textured background. The lighting is dramatic, emphasizing the raw, organic imperfections of the pottery. The aesthetic is extremely minimalist, focusing entirely on the tactile quality of the 'artisan craftsmanship'." src="assets/WhatsApp Image 2026-06-05 at 09.38.55.jpeg"/>
 </div>
@@ -192,7 +211,7 @@
 </div>
 </a>
 <!-- Gallery Item 2 -->
-<a class="group md:col-span-4 md:col-start-9 md:-mt-24 flex flex-col relative" href="#">
+<a class="group md:col-span-4 md:col-start-9 md:-mt-24 flex flex-col relative" href="collections.html">
 <div class="aspect-[3/4] w-full overflow-hidden bg-surface-container mb-6">
 <img alt="Decorative ceramic objects" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" data-alt="A minimalist photograph of a tall, elegantly curved ceramic vase in a soft terracotta tone, placed off-center against a plain bone-white wall. The lighting is soft and directional, creating a long, elegant shadow. The image exudes a calm, timeless 'slow design' aesthetic, emphasizing the silhouette of the object in expansive negative space." src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (11).jpeg"/>
 </div>
@@ -202,7 +221,7 @@
 </div>
 </a>
 <!-- Gallery Item 3 -->
-<a class="group md:col-span-8 md:col-start-3 flex flex-col relative" href="#">
+<a class="group md:col-span-8 md:col-start-3 flex flex-col relative" href="collections.html">
 <div class="aspect-[21/9] w-full overflow-hidden bg-surface-container mb-6">
 <img alt="Artistic ceramic pieces" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" data-alt="A wide, panoramic shot of a minimalist gallery setting. Several abstract, heavily textured ceramic sculptures in dark, muted tones are displayed on low, white plinths. The room is vast with extensive negative space, illuminated by soft, natural light coming from an unseen window. The mood is gallery-like, serious, and focused on material presence." src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (20).jpeg"/>
 </div>

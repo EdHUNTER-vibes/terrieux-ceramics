@@ -130,29 +130,48 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col">
 <!-- TopNavBar -->
-<nav class="sticky top-0 z-50 bg-surface dark:bg-background flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1920px] mx-auto flat no shadows transition-all duration-300" id="main-nav">
-<!-- Mobile Menu Button (Hidden on Desktop) -->
-<button aria-label="Open Menu" class="md:hidden p-2 text-primary dark:text-on-background hover:text-secondary transition-colors">
-<span class="material-symbols-outlined">menu</span>
-</button>
-<!-- Navigation Links (Left) -->
-<div class="hidden md:flex items-center space-x-gutter">
-<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
-</div>
-<!-- Brand Logo (Center) -->
-<div class="flex-shrink-0 cursor-pointer transition-opacity hover:opacity-80 absolute left-1/2 -translate-x-1/2">
-<a class="flex flex-col items-center" href="index.html">
-<img alt="TERRIEUX CERAMICS Logo" class="h-12 w-auto object-contain mb-1" src="assets/Terrieux-ceramics-logo.png"/>
-</a>
-</div>
-<!-- Trailing Actions (Right) -->
-<div class="flex items-center space-x-4">
-<button aria-label="Shopping Bag" class="p-2 text-primary dark:text-on-background hover:text-secondary transition-colors cursor-pointer">
-</button>
-</div>
+<nav class="sticky top-0 z-50 bg-surface dark:bg-background w-full transition-all duration-300" id="main-nav">
+  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1920px] mx-auto relative">
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden p-2 text-primary dark:text-on-background hover:text-secondary transition-colors">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <!-- Navigation Links (Left) -->
+    <div class="hidden md:flex items-center space-x-gutter flex-1">
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+    </div>
+    <!-- Brand Logo (Center) -->
+    <div class="flex-shrink-0 cursor-pointer transition-opacity hover:opacity-80 absolute left-1/2 -translate-x-1/2">
+      <a class="flex flex-col items-center" href="index.html">
+        <img alt="TERRIEUX CERAMICS Logo" class="h-12 w-auto object-contain mb-1" src="assets/Terrieux-ceramics-logo.png"/>
+      </a>
+    </div>
+    <!-- Trailing Actions (Right) -->
+    <div class="flex items-center space-x-4 flex-1 justify-end">
+      <!-- empty bag button removed to clean up if not needed, or kept empty -->
+    </div>
+  </div>
+  <!-- Mobile Menu Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-background border-t border-outline-variant px-margin-mobile py-4 flex flex-col space-y-4">
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
+      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+  </div>
 </nav>
+<script>
+  // Setup mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if(btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+  });
+</script>
 <a class="font-display-lg text-headline-sm md:text-headline-md text-primary tracking-tighter" href="#">TERRIEUX</a>
 <div class="flex items-center space-x-6">
 <button class="cursor-pointer transition-opacity hover:opacity-80 hidden md:block">
