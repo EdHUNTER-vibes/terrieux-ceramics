@@ -120,48 +120,26 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
 <!-- TopNavBar -->
-<nav class="sticky top-0 z-50 bg-surface dark:bg-background w-full transition-all duration-300" id="main-nav">
-  <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1920px] mx-auto relative">
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden p-2 text-primary dark:text-on-background hover:text-secondary transition-colors">
-      <span class="material-symbols-outlined">menu</span>
-    </button>
-    <!-- Navigation Links (Left) -->
-    <div class="hidden md:flex items-center space-x-gutter flex-1">
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
-    </div>
-    <!-- Brand Logo (Center) -->
-    <div class="flex-shrink-0 cursor-pointer transition-opacity hover:opacity-80 absolute left-1/2 -translate-x-1/2">
-      <a class="flex flex-col items-center" href="index.html">
-        <img alt="TERRIEUX CERAMICS Logo" class="h-12 w-auto object-contain mb-1" src="assets/Terrieux-ceramics-logo.png"/>
-      </a>
-    </div>
-    <!-- Trailing Actions (Right) -->
-    <div class="flex items-center space-x-4 flex-1 justify-end">
-      <!-- empty bag button removed to clean up if not needed, or kept empty -->
-    </div>
-  </div>
-  <!-- Mobile Menu Dropdown -->
-  <div id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-background border-t border-outline-variant px-margin-mobile py-4 flex flex-col space-y-4">
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
-  </div>
-</nav>
-<script>
-  // Setup mobile menu toggle
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    if(btn && menu) {
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    }
-  });
-</script>
+<nav class="bg-surface dark:bg-background docked full-width top-0 z-50"><div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1920px] mx-auto">
+<ul class="hidden md:flex gap-8 items-center">
+<li><a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300 cursor-pointer" href="#">Collections</a></li>
+<li><a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-secondary transition-colors duration-300 cursor-pointer" href="#">Workshop</a></li>
+</ul>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="absolute left-1/2 -translate-x-1/2">
+<a class="hover:opacity-80 transition-opacity" href="#">
+<img alt="TERRIEUX CERAMICS" class="h-8 md:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8arVw6jjhRrueb7dDCsNYUSbtWWWd-wK_nOEPhII9cYp4OmLv1VKzuvimVFX2pI4qakkK_MZUV-2YFWZt5Tp5tWrqF4L6tvij46P1rFRsr4aInH5BpsPNpdU0P_M3cVIDRqSjsvySXMpHOCcmsqeNhEDFt6YAWYUxQD4mrtebOvjEhlWs986qwfC0B_5LIilgXmxCGTRSGcXngCUQY0nUh4pWyUNq-Y-mEOClPurXHBdEWr3-hQQti9W7rWeSaX4rhjzYyGwclusF"/>
+</a>
+</div>
+<div class="flex gap-4 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300 cursor-pointer hidden md:block" href="#">Contact</a>
+<button class="text-primary p-2 hover:text-secondary transition-colors duration-300 cursor-pointer">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div></nav>
 <!-- Main Content -->
 <main class="flex-grow flex flex-col items-center w-full">
 <!-- Hero Title Section -->
@@ -179,7 +157,7 @@
 <!-- Image Column (Spans 7 cols, offset on large screens) -->
 <div class="lg:col-span-7 lg:col-start-1 relative group">
 <div class="aspect-[4/5] overflow-hidden bg-surface-container-high w-full h-full">
-<img alt="Portrait of an artisan potter in a dusty, sunlit studio." class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A portrait photograph of an artisan ceramicist in a minimalist, sun-drenched workshop. The lighting is natural and moody, casting soft shadows across raw clay surfaces and pottery wheels. The aesthetic is editorial and high-end, focusing on the tactile nature of the materials with a color palette dominated by bone whites, warm sandstone, and subtle terracotta accents. The composition is intimate yet spacious." src="assets/WhatsApp Image 2026-05-14 at 21.03.55.jpeg"/>
+<img alt="Portrait of an artisan potter in a dusty, sunlit studio." class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A portrait photograph of an artisan ceramicist in a minimalist, sun-drenched workshop. The lighting is natural and moody, casting soft shadows across raw clay surfaces and pottery wheels. The aesthetic is editorial and high-end, focusing on the tactile nature of the materials with a color palette dominated by bone whites, warm sandstone, and subtle terracotta accents. The composition is intimate yet spacious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG5U-zZIe2kb0JRYEdWKiUqCdfaQIRZH5D6Lq9GyTdHXHE2sDtjPipHxSdoeLkzTgJNxfmBbPDIe8C4puvzdJdbyt9HZClQGkN9v7SW6DwJfu48AqUfvLtkCWSD9YRvNZeoVRcEtKPgQLoqOuf3mIDePD_prHifub-KSg6jtOK-oN7CkHRfcyrhWpXwE-h7I-IRrm2RtGVQSTtiQj38Mrm80Uddl7ng76rY8UP2GHxEMl3TJbxfm371NX_c3kyhRuU2Wjv_ZK8bVYx"/>
 </div>
 </div>
 <!-- Text Column (Spans 4 cols, offset) -->
@@ -191,7 +169,7 @@
 </section>
 <!-- Full Width Interstitial Image -->
 <section class="w-full h-[60vh] md:h-[80vh] bg-surface-container-highest my-section-gap relative">
-<div class="absolute inset-0 parallax-bg" data-alt="A wide, immersive editorial photograph of a minimalist ceramic studio. Large windows let in bright, soft daylight, illuminating shelves lined with raw, unfired pottery and minimalist tools. The scene evokes a sense of calm and slow craftsmanship. The color palette features expansive bone white walls, warm wood tones, and the natural hues of sandstone and clay, adhering to a high-contrast yet airy aesthetic." style="background-image: url('assets/WhatsApp Image 2026-05-14 at 20.54.42 (18).jpeg');">
+<div class="absolute inset-0 parallax-bg" data-alt="A wide, immersive editorial photograph of a minimalist ceramic studio. Large windows let in bright, soft daylight, illuminating shelves lined with raw, unfired pottery and minimalist tools. The scene evokes a sense of calm and slow craftsmanship. The color palette features expansive bone white walls, warm wood tones, and the natural hues of sandstone and clay, adhering to a high-contrast yet airy aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5HEnu0HePGLsqHakTe2WFjaABW8kq6_f9ifaLWz38M-LE_NLCrgzs9oKGw4wuCsulnxNzs1VpqNJjqZV0KCnXoP_g1VAib9AQqs03F_7vdMHt5pE6n_yQIUKOu9XAWxSC7dTvU4jl1_MtwDl0uQrvOttu6_AMswTFoCHqXhemiu8nFzW0Zv1EVqMpxWP-Ul99iSg3A4sNE8Fvii5Mv3PqlWNlpNjgwDWusITjVAtc-eDq1hRytWN5xNJhdShypuJuFkewYhhKANID');">
 </div>
 </section>
 <!-- Section 2: Savoir-faire (Editorial Grid) -->
@@ -204,7 +182,7 @@
 <!-- Grid Item 1 -->
 <div class="lg:col-span-5 lg:col-start-2 group">
 <div class="aspect-square overflow-hidden bg-surface-container mb-8">
-<img alt="Close up of hands molding clay on a wheel." class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A macro, editorial close-up of artisan hands coated in wet slip, delicately shaping a piece of raw clay on a spinning pottery wheel. The lighting highlights the texture of the clay and the deliberate movement of the fingers. The background is a soft, out-of-focus dark void, drawing total focus to the tactile interaction. High-end, gallery-style aesthetic." src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (6).jpeg"/>
+<img alt="Close up of hands molding clay on a wheel." class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A macro, editorial close-up of artisan hands coated in wet slip, delicately shaping a piece of raw clay on a spinning pottery wheel. The lighting highlights the texture of the clay and the deliberate movement of the fingers. The background is a soft, out-of-focus dark void, drawing total focus to the tactile interaction. High-end, gallery-style aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB128ms7nV57rQ_UefQsNL2StgSr9TfQxt1IGbZl4yIXOSliR_U5Wq83NlaD4AmQ69bA7OM7rrEBzjqpRVW06ZgH4GYhJcx6kBs7zkdKsMvNmKKkpic1CJ2KWbG-8qXcoQMw-9ZCOkPL5CC9BZGAQ9RXQbzT0lubrLK6sTu0CwXaaEMWh0LMxJtkAJu1Pye8ailQvhAdTGuiDB_zGQIRWdDN_Lwhhz4HVgG_d6t1_wYn23sIr8LktNShGlP0BMxEQXtF1-DX2b-Yrd"/>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Le toucher</h3>
 </div>
@@ -218,7 +196,7 @@
 <!-- Grid Item 3 (Centered spanning) -->
 <div class="lg:col-span-8 lg:col-start-3 group">
 <div class="aspect-[16/9] overflow-hidden bg-surface-container mb-8">
-<img alt="Handcrafted ceramic cups with cobalt blue splattered glaze." class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A close-up editorial photograph of handcrafted ceramic cups. The cups feature a striking white base with organic, splattered patterns of deep cobalt blue glaze. The lighting is soft and directional, highlighting the smooth texture of the glaze and the unique, artisanal shape of the vessels. The background is a neutral, warm-toned gradient, emphasizing the vibrant blue of the ceramics." src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (19).jpeg"/>
+<img alt="Handcrafted ceramic cups with cobalt blue splattered glaze." class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A close-up editorial photograph of handcrafted ceramic cups. The cups feature a striking white base with organic, splattered patterns of deep cobalt blue glaze. The lighting is soft and directional, highlighting the smooth texture of the glaze and the unique, artisanal shape of the vessels. The background is a neutral, warm-toned gradient, emphasizing the vibrant blue of the ceramics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCgDdp9gHtyJNc3nNHoOCNy_WsQS0_iOo-TuiCPPfXrna95nchIUuS6YbodOrf419Z_fZpbQXiPy59BhcnX0ktrbN_sJVgF1ZUB5QH9MMqDssFGR8BXISFw7iWkliomsDbzlcIF8FoCmq005mFKkBO0DSEHibJuGB9KXZZXTsRueZNsNeTWn5h6foo3CqGL4OHQMUxk2QaSPw0k-PKXu3VgFSg4nLkMiaNWTCrRWbNQd5SJdN4lyd_En0mVwnvBEdmtYB2o07yIXKh"/>
 </div>
 <div class="max-w-2xl mx-auto text-center">
 <h3 class="font-headline-sm text-headline-sm text-primary mb-4">La patience</h3>
@@ -228,7 +206,7 @@
 </section>
 <!-- Call to Action -->
 <section class="w-full max-w-[1920px] px-margin-mobile md:px-margin-desktop pb-section-gap flex justify-center">
-<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-8 py-4 rounded hover:bg-secondary transition-colors duration-300" href="collections.html">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-8 py-4 rounded hover:bg-secondary transition-colors duration-300" href="#">
                 Explore The Collection
             </a>
 </section>
@@ -236,7 +214,7 @@
 <!-- Footer -->
 <footer class="bg-surface-container-low w-full border-t border-outline-variant"><div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-16 max-w-[1920px] mx-auto gap-8">
 <div class="w-full max-w-[140px] h-auto">
-<img alt="TERRIEUX" class="w-full h-auto object-contain" src="assets/Terrieux-ceramics-logo.png"/>
+<img alt="TERRIEUX" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmpibaB4X9Kw2T6c11ECxq9BE5QQcBUZ9DVeAPUIVCMpaqw7KG6hP2XC3-vZiYxt2jUsh09QbxQahtetC-NtfJeEdVazh1ZCWh7HEx4B-I1esd1-o9V6ZmMzp4gHqIR9mpdB9JU6t1QqXZDvLAEH3NTZPaJaPLcxl3C00IfETkOOZVyZRH-T3FvOcyqhpJkplc-29194OMUqxEfS7INfz3i5VMEDpOXjcuHR0Y4rS2X5gDz72vx0Ew1y_xDWVwjdnxVS4CEM4WKNFz"/>
 </div>
 <nav class="flex gap-8">
 <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-colors duration-200" href="#">Instagram</a>
