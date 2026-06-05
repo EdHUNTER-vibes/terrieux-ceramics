@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TERRIEUX - Collections</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Playfair+Display:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#fff8f1",
+                      "on-tertiary-fixed-variant": "#474744",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#444748",
+                      "secondary": "#964824",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed-dim": "#ffb597",
+                      "secondary-container": "#fd9a6f",
+                      "on-background": "#1d1b17",
+                      "surface-container": "#f3ede6",
+                      "outline-variant": "#c4c7c7",
+                      "surface-dim": "#dfd9d2",
+                      "tertiary": "#000000",
+                      "surface": "#fff8f1",
+                      "inverse-primary": "#c8c6c5",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#858480",
+                      "primary-fixed": "#e5e2e1",
+                      "on-tertiary-fixed": "#1c1c19",
+                      "on-secondary-fixed-variant": "#77320e",
+                      "surface-container-high": "#ede7e0",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e7e2db",
+                      "on-primary": "#ffffff",
+                      "surface-bright": "#fff8f1",
+                      "on-secondary-fixed": "#360f00",
+                      "primary-container": "#1c1b1b",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-secondary-container": "#76300d",
+                      "inverse-on-surface": "#f6f0e9",
+                      "surface-container-highest": "#e7e2db",
+                      "tertiary-fixed-dim": "#c8c6c2",
+                      "secondary-fixed": "#ffdbcd",
+                      "tertiary-container": "#1c1c19",
+                      "on-surface": "#1d1b17",
+                      "on-primary-fixed-variant": "#474746",
+                      "inverse-surface": "#33302c",
+                      "surface-container-low": "#f9f3eb",
+                      "surface-tint": "#5f5e5e",
+                      "primary": "#000000",
+                      "on-primary-container": "#858383",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#e5e2de",
+                      "outline": "#747878",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "32px",
+                      "section-gap": "160px",
+                      "unit": "8px",
+                      "margin-desktop": "80px",
+                      "margin-mobile": "24px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "label-caps": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .image-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .image-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased font-body-md text-body-md overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 bg-surface dark:bg-background flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1920px] mx-auto flat no shadows transition-all duration-300" id="main-nav">
+<!-- Mobile Menu Button (Hidden on Desktop) -->
+<button aria-label="Open Menu" class="md:hidden p-2 text-primary dark:text-on-background hover:text-secondary transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Navigation Links (Left) -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+<!-- Brand Logo (Center) -->
+<div class="flex-shrink-0 cursor-pointer transition-opacity hover:opacity-80 absolute left-1/2 -translate-x-1/2">
+<a class="flex flex-col items-center" href="index.html">
+<img alt="TERRIEUX CERAMICS Logo" class="h-12 w-auto object-contain mb-1" src="assets/Terrieux-ceramics-logo.png"/>
+</a>
+</div>
+<!-- Trailing Actions (Right) -->
+<div class="flex items-center space-x-4">
+<button aria-label="Shopping Bag" class="p-2 text-primary dark:text-on-background hover:text-secondary transition-colors cursor-pointer">
+</button>
+</div>
+</nav><div class="flex justify-center w-full md:w-1/3"><a class="block w-full max-w-[240px] hover:opacity-80 transition-opacity duration-300" href="#"><img alt="TERRIEUX" class="w-full h-auto object-contain" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (12).jpeg"/></a></div><div class="flex justify-end w-1/3 items-center gap-6"><button aria-label="shopping_bag" class="text-primary hover:text-secondary transition-colors duration-300 cursor-pointer transition-opacity hover:opacity-80"><span class="material-symbols-outlined text-[24px]">shopping_bag</span></button></div><button class="md:hidden text-primary ml-auto flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></header>
+<main class="min-h-screen">
+<!-- Header Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-16 md:py-32 max-w-[1920px] mx-auto">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-center font-light mb-6">Collections</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant text-center max-w-2xl mx-auto">Vaisselle sculpturale, objets décoratifs et pièces artistiques composent des collections pensées pour habiter les espaces avec caractère, calme et authenticité.</p>
+</section>
+<!-- Immersive Gallery Grid -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap max-w-[1920px] mx-auto">
+<div class="columns-2 md:columns-3 gap-unit md:gap-gutter">
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (13).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (14).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (15).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (16).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (17).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (18).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (19).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (2).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (20).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (21).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (22).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (23).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (24).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (25).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (3).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (4).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (5).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (6).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (7).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (8).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (9).jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 20.54.42.jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 21.03.55.jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 21.04.14.jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 21.12.37.jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-05-14 at 21.12.56.jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-06-05 at 09.38.55.jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/WhatsApp Image 2026-06-05 at 09.39.10.jpeg"/>
+</a>
+</div>
+<!-- Item -->
+<div class="break-inside-avoid mb-unit md:mb-gutter image-reveal visible">
+<a class="block w-full group overflow-hidden bg-surface-container relative" href="#">
+<img alt="Ceramic Work" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out" src="assets/Terrieux-ceramics-logo.png"/>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full border-t border-outline-variant"><div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-16 max-w-[1920px] mx-auto gap-8">
+<div class="w-full max-w-[140px] h-auto">
+<img alt="TERRIEUX" class="w-full h-auto object-contain" src="assets/Terrieux-ceramics-logo.png"/>
+</div>
+<nav class="flex gap-8">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-colors duration-200" href="#">Instagram</a>
+</nav>
+<div class="text-on-surface-variant font-label-caps text-label-caps text-right">
+    © 2026 TERRIEUX CERAMICS. TOUS DROITS RÉSERVÉS.
+  </div>
+</div></footer>
+<script>
+        // Simple Intersection Observer for scroll reveal effect
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.image-reveal').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body></html>

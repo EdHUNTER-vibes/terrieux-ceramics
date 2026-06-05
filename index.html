@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TERRIEUX CERAMICS - Accueil</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#444748",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#ede7e0",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "secondary-fixed": "#ffdbcd",
+                        "on-error": "#ffffff",
+                        "tertiary": "#000000",
+                        "primary-fixed": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "surface-tint": "#5f5e5e",
+                        "secondary-fixed-dim": "#ffb597",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#1c1b1b",
+                        "inverse-surface": "#33302c",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f3ede6",
+                        "primary": "#000000",
+                        "surface": "#fff8f1",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#c8c6c5",
+                        "on-primary-container": "#858383",
+                        "secondary-container": "#fd9a6f",
+                        "on-tertiary-container": "#858480",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e5e2de",
+                        "surface-variant": "#e7e2db",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#77320e",
+                        "background": "#fff8f1",
+                        "on-background": "#1d1b17",
+                        "surface-container-highest": "#e7e2db",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "on-secondary-fixed": "#360f00",
+                        "surface-container-low": "#f9f3eb",
+                        "on-primary-fixed": "#1c1b1b",
+                        "outline-variant": "#c4c7c7",
+                        "on-primary-fixed-variant": "#474746",
+                        "secondary": "#964824",
+                        "surface-dim": "#dfd9d2",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fff8f1",
+                        "on-surface": "#1d1b17",
+                        "outline": "#747878",
+                        "on-secondary-container": "#76300d",
+                        "inverse-on-surface": "#f6f0e9",
+                        "tertiary-container": "#1c1c19"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "section-gap": "160px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 bg-surface dark:bg-background flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1920px] mx-auto flat no shadows transition-all duration-300" id="main-nav">
+<!-- Mobile Menu Button (Hidden on Desktop) -->
+<button aria-label="Open Menu" class="md:hidden p-2 text-primary dark:text-on-background hover:text-secondary transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Navigation Links (Left) -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+<!-- Brand Logo (Center) -->
+<div class="flex-shrink-0 cursor-pointer transition-opacity hover:opacity-80 absolute left-1/2 -translate-x-1/2">
+<a class="flex flex-col items-center" href="index.html">
+<img alt="TERRIEUX CERAMICS Logo" class="h-12 w-auto object-contain mb-1" src="assets/Terrieux-ceramics-logo.png"/>
+</a>
+</div>
+<!-- Trailing Actions (Right) -->
+<div class="flex items-center space-x-4">
+<button aria-label="Shopping Bag" class="p-2 text-primary dark:text-on-background hover:text-secondary transition-colors cursor-pointer">
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Close-up of artisan hands shaping clay on a pottery wheel." class="w-full h-full object-cover object-center" data-alt="A highly detailed, editorial-style close-up photograph of artisan hands covered in wet clay, expertly shaping a vessel on a spinning pottery wheel. The lighting is moody and natural, casting soft shadows that highlight the raw texture of the 'bone white' clay and the dynamic movement of the wheel. The background is a soft, dark blur to emphasize the craftsmanship. The overall aesthetic is minimalist, organic, and premium." src="assets/Terrieux-ceramics-logo.png"/>
+<!-- Subtle overlay for text readability -->
+<div class="absolute inset-0 bg-black/20 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center px-margin-mobile md:px-margin-desktop mt-16">
+<div class="flex flex-col items-center mb-8 opacity-0 translate-y-4 animate-[fade-in-up_1s_ease-out_forwards]"><img alt="Terrieux Logo" class="h-24 md:h-32 w-auto object-contain mb-6 invert brightness-0" src="assets/WhatsApp Image 2026-05-14 at 20.54.40.jpeg"/><p class="font-label-caps text-label-caps text-on-primary tracking-widest uppercase">Sculpter la matière, révéler l'émotion</p></div>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors duration-300 opacity-0 translate-y-4 animate-[fade-in-up_1s_ease-out_0.3s_forwards]" href="#collections">
+                    Découvrir les collections
+                </a>
+</div>
+</section>
+<!-- Intro Section (Asymmetrical Layout) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<!-- Text Block -->
+<div class="md:col-span-5 md:col-start-2 order-2 md:order-1 flex flex-col justify-center space-y-6">
+<h2 class="font-headline-md text-headline-md text-primary">Un artisanat silencieux</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Antony Terrieux crée des pièces céramiques uniques où la terre devient texture, mouvement et présence. Son univers artistique puise dans les formes organiques, les matières brutes et une esthétique minimaliste profondément contemporaine. Chaque création est façonnée à la main avec une attention particulière portée à l’équilibre, aux sensations et aux détails.</p><p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mt-4">Les surfaces, les nuances et les imperfections naturelles deviennent une signature visuelle, donnant naissance à des objets vivants et intemporels. Entre art et design, TERRIEUX CERAMICS développe une vision sensible de la céramique où fonctionnalité et émotion coexistent harmonieusement.</p>
+<div class="pt-4">
+<a class="group inline-flex items-center text-primary font-label-caps text-label-caps uppercase tracking-widest hover:text-secondary transition-colors" href="#">
+                            Notre philosophie
+                            <span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Image Block (Offset) -->
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2 mb-12 md:mb-0 relative">
+<div class="aspect-[3/4] md:aspect-[4/5] w-full overflow-hidden bg-surface-container-high">
+<img alt="Artisan potier travaillant la terre dans son atelier" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An editorial, gallery-style photograph of a minimalist arrangement of finished ceramic vessels in a soft 'sandstone' color. The pieces are placed on a stark, 'bone white' pedestal against a plain, light background. The lighting is diffused and flat, creating a silent, high-contrast, premium aesthetic with deep, soft shadows. The composition is deliberately asymmetrical, reflecting raw materiality." src="assets/WhatsApp Image 2026-05-14 at 20.54.41.jpeg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Galleries Section (Bento/Asymmetric Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1920px] mx-auto bg-surface-container-low" id="collections">
+<div class="mb-16 md:mb-24 flex justify-between items-end">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">Nos Espaces</h2><p class="font-body-lg text-body-lg text-on-surface-variant mt-6 max-w-2xl">Vaisselle sculpturale, objets décoratifs et pièces artistiques composent des collections pensées pour habiter les espaces avec caractère, calme et authenticité.</p>
+<span class="hidden md:block font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Éditions Limitées</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter md:gap-y-32">
+<!-- Gallery Item 1 -->
+<a class="group md:col-span-7 flex flex-col relative" href="#">
+<div class="aspect-[16/9] w-full overflow-hidden bg-surface-container mb-6">
+<img alt="Sculptural tableware" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" data-alt="A striking, high-contrast flat lay photograph of a single, roughly textured ceramic plate. The plate is dark grey, contrasting sharply against a stark white textured background. The lighting is dramatic, emphasizing the raw, organic imperfections of the pottery. The aesthetic is extremely minimalist, focusing entirely on the tactile quality of the 'artisan craftsmanship'." src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (1).jpeg"/>
+</div>
+<div class="flex items-center space-x-4">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Vaisselle sculpturale</h3>
+</div>
+</a>
+<!-- Gallery Item 2 -->
+<a class="group md:col-span-4 md:col-start-9 md:-mt-24 flex flex-col relative" href="#">
+<div class="aspect-[3/4] w-full overflow-hidden bg-surface-container mb-6">
+<img alt="Decorative ceramic objects" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" data-alt="A minimalist photograph of a tall, elegantly curved ceramic vase in a soft terracotta tone, placed off-center against a plain bone-white wall. The lighting is soft and directional, creating a long, elegant shadow. The image exudes a calm, timeless 'slow design' aesthetic, emphasizing the silhouette of the object in expansive negative space." src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (10).jpeg"/>
+</div>
+<div class="flex items-center space-x-4">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Objets décoratifs</h3>
+</div>
+</a>
+<!-- Gallery Item 3 -->
+<a class="group md:col-span-8 md:col-start-3 flex flex-col relative" href="#">
+<div class="aspect-[21/9] w-full overflow-hidden bg-surface-container mb-6">
+<img alt="Artistic ceramic pieces" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" data-alt="A wide, panoramic shot of a minimalist gallery setting. Several abstract, heavily textured ceramic sculptures in dark, muted tones are displayed on low, white plinths. The room is vast with extensive negative space, illuminated by soft, natural light coming from an unseen window. The mood is gallery-like, serious, and focused on material presence." src="assets/WhatsApp Image 2026-05-14 at 20.54.42 (11).jpeg"/>
+</div>
+<div class="flex items-center space-x-4 justify-end">
+<h3 class="font-headline-sm text-headline-sm text-primary">Pièces artistiques</h3>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full border-t border-outline-variant"><div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-16 max-w-[1920px] mx-auto gap-8">
+<div class="w-full max-w-[140px] h-auto">
+<img alt="TERRIEUX" class="w-full h-auto object-contain" src="assets/Terrieux-ceramics-logo.png"/>
+</div>
+<nav class="flex gap-8">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-colors duration-200" href="#">Instagram</a>
+</nav>
+<div class="text-on-surface-variant font-label-caps text-label-caps text-right">
+    © 2026 TERRIEUX CERAMICS. TOUS DROITS RÉSERVÉS.
+  </div>
+</div></footer>
+<!-- Simple fade-in animation for hero -->
+<style>
+        @keyframes fade-in-up {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+<script>
+        // Optional: Add a subtle scroll effect to the navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm', 'bg-surface/90', 'backdrop-blur-md');
+                nav.classList.remove('bg-surface');
+            } else {
+                nav.classList.remove('shadow-sm', 'bg-surface/90', 'backdrop-blur-md');
+                nav.classList.add('bg-surface');
+            }
+        });
+    </script>
+</body></html>
