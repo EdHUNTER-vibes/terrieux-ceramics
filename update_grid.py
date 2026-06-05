@@ -1,7 +1,7 @@
 import re
 
 html_path = r"C:\Users\caste\.gemini\antigravity-ide\scratch\terrieux-ceramics\collections.html"
-requested_order = [18, 6, 14, 19, 33, 3, 20, 34, 2, 28, 22, 23, 8, 27, 13, 10, 4, 17, 5, 25, 12, 7, 26, 16, 9, 31, 11, 21, 15]
+requested_order = [18, 19, 20, 28, 8, 10, 5, 7, 9, 6, 33, 34, 22, 27, 4, 25, 26, 31, 21, 14, 3, 2, 23, 13, 17, 12, 16, 11, 15]
 
 grid_html = '<div class="columns-2 md:columns-3 gap-unit md:gap-gutter" id="gallery-grid">\n'
 for i, num in enumerate(requested_order):
