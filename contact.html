@@ -130,34 +130,56 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col">
 <!-- TopNavBar -->
+<!-- TopNavBar -->
 <nav class="sticky top-0 z-50 bg-surface dark:bg-background w-full transition-all duration-300" id="main-nav">
   <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1920px] mx-auto relative">
+    
     <!-- Mobile Menu Button -->
     <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden p-2 text-primary dark:text-on-background hover:text-secondary transition-colors">
       <span class="material-symbols-outlined">menu</span>
     </button>
+    
     <!-- Navigation Links (Left) -->
     <div class="hidden md:flex items-center space-x-gutter flex-1">
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+      <a data-i18n="nav_boutique" class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="boutique.html">Boutique</a>
+      <a data-i18n="nav_collections" class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
+      <a data-i18n="nav_atelier" class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
+      <a data-i18n="nav_contact" class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
     </div>
+    
     <!-- Brand Logo (Center) -->
     <div class="flex-shrink-0 cursor-pointer transition-opacity hover:opacity-80 absolute left-1/2 -translate-x-1/2">
       <a class="flex flex-col items-center" href="index.html">
         <img alt="TERRIEUX CERAMICS Logo" class="h-12 w-auto object-contain mb-1" src="assets/Terrieux-ceramics-logo.png"/>
       </a>
     </div>
+    
     <!-- Trailing Actions (Right) -->
     <div class="flex items-center space-x-4 flex-1 justify-end">
-      <!-- empty bag button removed to clean up if not needed, or kept empty -->
+      <!-- Language Selector -->
+      <div class="relative group cursor-pointer">
+        <div class="flex items-center space-x-1 text-on-surface-variant hover:text-secondary transition-colors font-label-caps text-label-caps tracking-widest uppercase">
+          <span id="current-lang-display">FR</span>
+          <span class="material-symbols-outlined text-[16px]">expand_more</span>
+        </div>
+        <!-- Dropdown -->
+        <div class="absolute right-0 top-full mt-2 w-24 bg-surface-container-high border border-outline-variant shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
+          <div class="py-2 flex flex-col">
+            <button onclick="setLanguage('fr')" class="font-label-caps text-label-caps tracking-widest uppercase text-left px-4 py-2 hover:bg-surface-variant hover:text-secondary text-primary transition-colors">FR</button>
+            <button onclick="setLanguage('en')" class="font-label-caps text-label-caps tracking-widest uppercase text-left px-4 py-2 hover:bg-surface-variant hover:text-secondary text-primary transition-colors">EN</button>
+            <button onclick="setLanguage('es')" class="font-label-caps text-label-caps tracking-widest uppercase text-left px-4 py-2 hover:bg-surface-variant hover:text-secondary text-primary transition-colors">ES</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  
   <!-- Mobile Menu Dropdown -->
   <div id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-background border-t border-outline-variant px-margin-mobile py-4 flex flex-col space-y-4">
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
-      <a class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+      <a data-i18n="nav_boutique" class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="boutique.html">Boutique</a>
+      <a data-i18n="nav_collections" class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="collections.html">Collections</a>
+      <a data-i18n="nav_atelier" class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="atelier.html">ATELIER</a>
+      <a data-i18n="nav_contact" class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
   </div>
 </nav>
 <script>
@@ -179,15 +201,13 @@
 <!-- Contact Header & Info (Left Column) -->
 <div class="col-span-1 md:col-span-5 md:pr-12 lg:pr-24 flex flex-col gap-12">
 <div>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Contact</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                        Créations artisanales, collaborations artistiques et commandes sur mesure disponibles sur demande.
-                    </p>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6" data-i18n="contact_title">Contact</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed" data-i18n="contact_subtitle">Créations artisanales, collaborations artistiques et commandes sur mesure disponibles sur demande.</p>
 </div>
 <div class="flex flex-col gap-8 mt-8 md:mt-16">
 <div>
-<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2">Réseaux Sociaux</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-2">Retrouvez les dernières créations sur instagram :</p>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2" data-i18n="contact_social_title">Réseaux Sociaux</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2" data-i18n="contact_social_desc">Retrouvez les dernières créations sur instagram :</p>
 <a href="https://www.instagram.com/terrieux_ceramics/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors duration-300 font-body-md mt-1">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -198,12 +218,12 @@
 </a>
 </div>
 <div>
-<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2">Studio</h3>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2" data-i18n="contact_studio_title">Studio</h3>
 <p class="font-body-md text-body-md text-primary">14 Rue des Potiers<br>75003 Paris, France</p>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm">Seulement sur rendez-vous</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm" data-i18n="contact_studio_desc">Seulement sur rendez-vous</p>
 </div>
 <div>
-<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2">Direct</h3>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2" data-i18n="contact_direct_title">Direct</h3>
 <a class="font-body-md text-body-md text-primary hover:text-secondary transition-colors block" href="mailto:hello@terrieux.com">hello@terrieux.com</a>
 <a class="font-body-md text-body-md text-primary hover:text-secondary transition-colors block mt-1" href="tel:+33123456789">+33 6 28 65 05 60</a>
 </div>
@@ -214,16 +234,16 @@
 <form class="space-y-12">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="relative">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest absolute -top-4 left-0" for="name">Nom</label>
-<input class="form-input font-body-md text-body-md text-primary" id="name" name="name" placeholder="Votre nom" required="" type="text">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest absolute -top-4 left-0" for="name" data-i18n="contact_form_name">Nom</label>
+<input class="form-input font-body-md text-body-md text-primary" id="name" name="name" placeholder="Votre nom" data-i18n="contact_form_name_ph" required="" type="text">
 </div>
 <div class="relative mt-8 md:mt-0">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest absolute -top-4 left-0" for="email">Email</label>
-<input class="form-input font-body-md text-body-md text-primary" id="email" name="email" placeholder="adresse@email.com" required="" type="email">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest absolute -top-4 left-0" for="email" data-i18n="contact_form_email">Email</label>
+<input class="form-input font-body-md text-body-md text-primary" id="email" name="email" placeholder="adresse@email.com" data-i18n="contact_form_email_ph" required="" type="email">
 </div>
 </div>
 <div class="relative mt-12">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest absolute -top-4 left-0" for="project_type">Type de projet</label>
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest absolute -top-4 left-0" for="project_type" data-i18n="contact_form_project">Type de projet</label>
 <div class="relative">
 <select class="form-select font-body-md text-body-md text-primary cursor-pointer bg-none" id="project_type" name="project_type">
 <option disabled="" selected="" value="">Sélectionner une option</option>
@@ -236,7 +256,7 @@
 </div>
 </div>
 <div class="relative mt-12">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest absolute -top-4 left-0" for="message">Message</label>
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest absolute -top-4 left-0" for="message" data-i18n="contact_form_message">Message</label>
 <textarea class="form-input font-body-md text-body-md text-primary resize-none" id="message" name="message" placeholder="Détaillez votre projet ou votre question..." required="" rows="4"></textarea>
 </div>
 <div class="mt-16 flex justify-end">
@@ -263,9 +283,10 @@
 </a>
 </nav>
 <div class="text-on-surface-variant font-label-caps text-label-caps text-right">
-    © 2026 TERRIEUX CERAMICS. TOUS DROITS RÉSERVÉS.
+    <span data-i18n="footer_copyright">© 2026 TERRIEUX CERAMICS. TOUS DROITS RÉSERVÉS.</span>
   </div>
 </div></footer>
 
 
+<script src="js/i18n.js"></script>
 </body></html>
